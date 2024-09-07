@@ -11,8 +11,12 @@ idna==3.8
 itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==2.1.5
+pillow==10.4.0
 pytz==2024.1
+setuptools==74.0.0
 SQLAlchemy==2.0.32
+svgwrite==1.4.3
+Tree==0.2.4
 typing_extensions==4.12.2
 Werkzeug==3.0.3
 WTForms==3.1.2
