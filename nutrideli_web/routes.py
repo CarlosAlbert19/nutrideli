@@ -1,27 +1,12 @@
 import os
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from nutrideli_web import app, db, bcrypt
-from nutrideli_web.forms import Registro, Iniciar_sesion, Actualizar_informacion
+from nutrideli_web.forms import Registro, Iniciar_sesion, Actualizar_informacion, Publicacion
 from nutrideli_web.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
-
-publicaciones = [
-     {
-          'autor': 'Carlos Reyes',
-          'titulo': 'Publicacion 1',
-          'contenido': 'Primera publicación de la plataforma',
-          'fecha_publicada': '1 de agosto de 2024'
-     },
-     {
-          'autor': 'Marcos Guzman',
-          'titulo': 'Publicacion 2',
-          'contenido': 'Segunda publicación de la plataforma',
-          'fecha_publicada': '2 de agosto de 2024'
-     }
-]
 
 @app.route("/")
 @app.route("/inicio")
@@ -30,6 +15,7 @@ def inicio():
 
 @app.route("/publicaciones")
 def blog_publicaciones():
+    publicaciones = Post.query.all()
     return render_template ('publicaciones.html', publicaciones=publicaciones, titulo_pagina='Publicaciones')
 
 @app.route("/nutripedia")
@@ -106,3 +92,52 @@ def cuenta():
      image_file =url_for('static', filename='profile_pics/' + current_user.image_file)
      return render_template ('cuenta.html', titulo_pagina='Cuenta', image_file=image_file, form=form)
 
+
+@app.route("/publicaciones/nueva", methods=['GET', 'POST'])
+@login_required
+def nueva_publicacion():
+    form = Publicacion()
+    if form.validate_on_submit():
+         post = Post(title=form.title.data, content=form.content.data, author=current_user)
+         db.session.add(post)
+         db.session.commit()
+         flash('¡Tu publicación ha sido creada!', 'success')
+         return redirect(url_for('blog_publicaciones'))
+    return render_template ('crear_publicacion.html', titulo_pagina='Nueva Publicacion', form=form, legend='¡Comparte tus experiencias con los demás usuarios!')
+
+
+@app.route("/publicaciones/<int:post_id>")
+def post(post_id):
+     post = Post.query.get_or_404(post_id)
+     return render_template ('publi.html', title=post.title, publicacion=post)
+
+
+@app.route("/publicaciones/<int:post_id>/modificar", methods=['GET', 'POST'])
+@login_required
+def modificar_post(post_id):
+     post = Post.query.get_or_404(post_id)
+     if post.author != current_user:
+          abort(403)
+     form = Publicacion()
+     if form.validate_on_submit():
+          post.title = form.title.data
+          post.content= form.content.data
+          db.session.commit()
+          flash('¡Tu publicación ha sido modificada!', 'success')
+          return redirect(url_for('post', post_id=post.id))
+     elif request.method == 'GET':
+          form.title.data = post.title
+          form.content.data = post.content
+     return render_template ('crear_publicacion.html', titulo_pagina='Modificar Publicacion', form=form, legend='Modificar Publicación')
+
+
+@app.route("/publicaciones/<int:post_id>/eliminar", methods=['POST'])
+@login_required
+def eliminar_post(post_id):
+     post = Post.query.get_or_404(post_id)
+     if post.author != current_user:
+          abort(403)
+     db.session.delete(post)
+     db.session.commit()
+     flash('¡Tu publicación ha sido eliminada!', 'success')
+     return redirect(url_for('blog_publicaciones'))
