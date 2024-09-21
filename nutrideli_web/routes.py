@@ -15,7 +15,8 @@ def inicio():
 
 @app.route("/publicaciones")
 def blog_publicaciones():
-    publicaciones = Post.query.all()
+    page = request.args.get('page', 1, type=int)
+    publicaciones = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=10)
     return render_template ('publicaciones.html', publicaciones=publicaciones, titulo_pagina='Publicaciones')
 
 @app.route("/nutripedia")
@@ -141,3 +142,11 @@ def eliminar_post(post_id):
      db.session.commit()
      flash('¡Tu publicación ha sido eliminada!', 'success')
      return redirect(url_for('blog_publicaciones'))
+
+
+@app.route("/usuario/<string:username>")
+def user_posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    publicaciones = Post.query.filter_by(author=user).order_by(Post.date_posted.desc()).paginate(page=page, per_page=10)
+    return render_template ('publicaciones_usuario.html', publicaciones=publicaciones, titulo_pagina='Publicaciones de usuario', user=user)
