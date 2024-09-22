@@ -1,9 +1,11 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
-from wtforms.validators import InputRequired, DataRequired, Length, Email, EqualTo, ValidationError
 from nutrideli_web.models import User
+
+
 
 class Registro(FlaskForm):
     username = StringField('Nombre de usuario', validators=[DataRequired(), Length(min=2, max=25)])
@@ -47,13 +49,7 @@ class Actualizar_informacion(FlaskForm):
             user = User.query.filter_by(email=email.data).first()
             if user:
                 raise ValidationError('Ese correo ya se encuentra en uso. Por favor, ingrese uno diferente.')
-
-
-class Publicacion(FlaskForm):
-    title = StringField('Título', validators=[DataRequired()])
-    content = TextAreaField('Contenido', validators=[DataRequired()])
-    submit = SubmitField('Publicar')
-
+            
 
 class RequestResetForm(FlaskForm):
     email = StringField('Correo', validators=[DataRequired(), Email()])
