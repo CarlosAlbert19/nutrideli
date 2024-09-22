@@ -53,3 +53,17 @@ class Publicacion(FlaskForm):
     title = StringField('Título', validators=[DataRequired()])
     content = TextAreaField('Contenido', validators=[DataRequired()])
     submit = SubmitField('Publicar')
+
+
+class RequestResetForm(FlaskForm):
+    email = StringField('Correo', validators=[DataRequired(), Email()])
+    submit = SubmitField('Reestablecer contraseña')
+    def validate_email(self, email):
+        user = User.query.filter_by(email=email.data).first()
+        if user is None:
+            raise ValidationError('No existe una cuenta registrada con ese correo.')
+    
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Contraseña', validators=[DataRequired()])
+    confirm_password = PasswordField('Confirmar contraseña', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Reestablecer contraseña')
