@@ -16,13 +16,13 @@ def nueva_publicacion():
          db.session.commit()
          flash('¡Tu publicación ha sido creada!', 'success')
          return redirect(url_for('posts.blog_publicaciones'))
-    return render_template ('crear_publicacion.html', titulo_pagina='Nueva Publicacion', form=form, legend='¡Comparte tus experiencias con los demás usuarios!')
+    return render_template ('crear_publicacion.html', titulo_pagina='Nueva Publicacion', form=form, legend='¡Comparte tus experiencias con los demás usuarios!', es_inicio=False)
 
 
 @posts.route("/publicaciones/<int:post_id>")
 def post(post_id):
      post = Post.query.get_or_404(post_id)
-     return render_template ('publi.html', title=post.title, publicacion=post)
+     return render_template ('publi.html', title=post.title, publicacion=post, es_inicio=False)
 
 
 @posts.route("/publicaciones/<int:post_id>/modificar", methods=['GET', 'POST'])
@@ -41,7 +41,7 @@ def modificar_post(post_id):
      elif request.method == 'GET':
           form.title.data = post.title
           form.content.data = post.content
-     return render_template ('crear_publicacion.html', titulo_pagina='Modificar Publicacion', form=form, legend='Modificar Publicación')
+     return render_template ('crear_publicacion.html', titulo_pagina='Modificar Publicacion', form=form, legend='Modificar Publicación', es_inicio=False)
 
 
 @posts.route("/publicaciones/<int:post_id>/eliminar", methods=['POST'])
@@ -53,4 +53,4 @@ def eliminar_post(post_id):
      db.session.delete(post)
      db.session.commit()
      flash('¡Tu publicación ha sido eliminada!', 'success')
-     return redirect(url_for('posts.blog_publicaciones'))
+     return redirect(url_for('posts.blog_publicaciones'), es_inicio=False)
