@@ -13,27 +13,29 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
           <div class="container">
-            <a class="navbar-brand mr-4" href="/">NutriDeli</a>
+            <a class="navbar-brand mr-4" href="/">
+              <img src="{{ url_for('static', filename='useful_images/nutrideli_logoF.png') }}" alt="Logo" style="height: 50px;">
+              </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
               <!-- PARTE IZQUIERDA DE LA BARRA DE NAVEGACION -->  
               <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="{{ url_for('main.inicio') }}">Inicio</a>
-                <a class="nav-item nav-link" href="{{ url_for('main.blog_publicaciones') }}">Publicaciones</a>
-                <a class="nav-item nav-link" href="{{ url_for('main.nutripedia') }}">Nutripedia</a>
-                <a class="nav-item nav-link" href="{{ url_for('main.acerca_de') }}">Acerca de</a>
+                <a class="nav-item nav-link {% if request.endpoint == 'main.inicio' %}active{% endif %}" href="{{ url_for('main.inicio') }}">Inicio</a>
+                <a class="nav-item nav-link {% if request.endpoint == 'main.blog_publicaciones' %}active{% endif %}" href="{{ url_for('main.blog_publicaciones') }}">Publicaciones</a>
+                <a class="nav-item nav-link {% if request.endpoint == 'main.nutripedia' %}active{% endif %}" href="{{ url_for('main.nutripedia') }}">Nutripedia</a>
+                <a class="nav-item nav-link {% if request.endpoint == 'main.acerca_de' %}active{% endif %}" href="{{ url_for('main.acerca_de') }}">Acerca de</a>
               </div>
               <!-- PARTE DERECHA DE LA BARRA DE NAVEGACION -->
               <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
-                  <a class="nav-item nav-link" href="{{ url_for('posts.nueva_publicacion') }}">Nueva Publicación </a>
-                  <a class="nav-item nav-link" href="{{ url_for('users.cuenta') }}">Cuenta </a>
+                  <a class="nav-item nav-link {% if request.endpoint == 'posts.nueva_publicacion' %}active{% endif %}" href="{{ url_for('posts.nueva_publicacion') }}">Nueva Publicación </a>
+                  <a class="nav-item nav-link {% if request.endpoint == 'users.cuenta' %}active{% endif %}" href="{{ url_for('users.cuenta') }}">Cuenta </a>
                   <a class="nav-item nav-link" href="{{ url_for('users.cerrar_sesion') }}">Cerrar sesión</a>
                 {% else %}
-                  <a class="nav-item nav-link" href="{{ url_for('users.iniciar_sesion') }}">Iniciar sesión</a>
-                  <a class="nav-item nav-link" href="{{ url_for('users.registro') }}">Registrarse</a>
+                  <a class="nav-item nav-link {% if request.endpoint == 'users.iniciar_sesion' %}active{% endif %}" href="{{ url_for('users.iniciar_sesion') }}">Iniciar sesión</a>
+                  <a class="nav-item nav-link {% if request.endpoint == 'users.registro' %}active{% endif %}" href="{{ url_for('users.registro') }}">Registrarse</a>
                 {% endif %}
               </div>
             </div>

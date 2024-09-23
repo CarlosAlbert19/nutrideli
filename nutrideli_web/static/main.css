@@ -1,5 +1,8 @@
 body {
-    background: #fafafa;
+    background-image: url('useful_images/nutrideli_fondo2.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     color: #333333;
     margin-top: 5rem;
   }
@@ -9,11 +12,14 @@ body {
   }
   
   .bg-steel {
-    background-color: #5f788a;
+    background-color: #4CAF50;
   }
   
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
   }
   
   .site-header .navbar-nav .nav-link:hover {
@@ -22,13 +28,17 @@ body {
   
   .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
+    color: #2a5e2c;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
   }
   
   .content-section {
-    background: #ffffff;
+    background: #fcfcfc;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 2px solid #000000;
     border-radius: 3px;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
   
@@ -78,3 +88,4 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
