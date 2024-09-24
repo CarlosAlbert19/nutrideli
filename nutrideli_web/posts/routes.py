@@ -15,7 +15,7 @@ def nueva_publicacion():
          db.session.add(post)
          db.session.commit()
          flash('¡Tu publicación ha sido creada!', 'success')
-         return redirect(url_for('posts.blog_publicaciones'))
+         return redirect(url_for('main.blog_publicaciones'))
     return render_template ('crear_publicacion.html', titulo_pagina='Nueva Publicacion', form=form, legend='¡Comparte tus experiencias con los demás usuarios!', es_inicio=False)
 
 
@@ -53,4 +53,4 @@ def eliminar_post(post_id):
      db.session.delete(post)
      db.session.commit()
      flash('¡Tu publicación ha sido eliminada!', 'success')
-     return redirect(url_for('posts.blog_publicaciones'), es_inicio=False)
+     return redirect(url_for('main.blog_publicaciones'))

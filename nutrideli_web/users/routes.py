@@ -40,7 +40,7 @@ def iniciar_sesion():
 @users.route("/cerrar_sesion")
 def cerrar_sesion():
      logout_user()
-     return redirect(url_for('main.inicio'), es_inicio=False)
+     return redirect(url_for('main.inicio'))
 
 
 @users.route("/cuenta", methods=['GET', 'POST'])
