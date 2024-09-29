@@ -2,8 +2,32 @@
 {% block content %}
 <article class="media about-section col-md-32">
     <div class="media-body">
-    <h1 class="about-title">Acerca de NutriDeli</h1>
-    <p class="about-content">Hola mundo</p>
+        <h1 class="about-title text-center">Acerca de NutriDeli</h1>
+        <p class="about-content text-justify">En NutriDeli, entendemos que cada individuo es único y que sus necesidades nutricionales deben ser igualmente personalizadas. Nuestra plataforma web de creación de dietas personalizadas está diseñada específicamente para satisfacer las exigencias de los entusiastas del fitness que buscan optimizar su rendimiento a través de una alimentación adecuada. Sabemos que la nutrición es una parte fundamental del éxito en cualquier programa de entrenamiento, y es por eso que hemos desarrollado un sistema que permite a nuestros usuarios crear planes de alimentación adaptados a sus objetivos específicos.
+        </p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='useful_images/nutrideli_logoF.png') }}" alt="Logo" style="height: 300px;">
+        </div>
+    </div>
+</article>
+<article class="media about-section col-md-32">
+    <div class="media-body">
+        <h1 class="about-title text-center">Nuestro Objetivo</h1>
+        <p class="about-content text-justify">Nuestro objetivo es proporcionar una experiencia interactiva y fácil de usar que ayude a los usuarios a tomar decisiones informadas sobre su alimentación. Creemos firmemente en la importancia de la educación nutricional, y por ello, ofrecemos recursos adicionales como artículos, guías y consejos de profesionales del sector. Queremos que nuestros usuarios no solo sigan un plan de alimentación, sino que también comprendan los principios detrás de sus elecciones alimentarias.
+        </p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='useful_images/about1.jpg') }}" alt="Logo" style="height: 500px;">
+        </div>
+    </div>
+</article>
+<article class="media about-section col-md-32">
+    <div class="media-body">
+        <h1 class="about-title text-center">La Comunidad NutriDeli</h1>
+        <p class="about-content text-justify">La comunidad NutriDeli es un aspecto fundamental de nuestra plataforma. Fomentamos la interacción entre nuestros usuarios, permitiendo que compartan sus experiencias, recetas favoritas y logros. Creemos que el apoyo mutuo es clave para alcanzar metas de salud y bienestar, y estamos comprometidos a construir un entorno en el que cada miembro se sienta motivado e inspirado.
+        </p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='useful_images/about2.jpg') }}" alt="Logo" style="height: 500px;">
+        </div>
     </div>
 </article>
 {% endblock content %}

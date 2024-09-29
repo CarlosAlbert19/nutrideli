@@ -121,6 +121,9 @@ body {
   
   .about-content {
     white-space: pre-line;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 40px;
   }
 
   .carousel-item {

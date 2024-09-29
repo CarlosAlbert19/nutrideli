@@ -21,7 +21,7 @@
                 <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
                     <h5 style="color: rgb(145, 251, 59);">COMPARTE TU EXPERIENCIA</h5>
                     <p>Realiza una publicación sobre cómo va tu progreso, comparte algún dato interesante u observa qué es lo que los otros usuarios están comentando.</p>
-                    <a href="#" class="btn btn-primary">¡Publica algo ya!</a>
+                    <a href="{{ url_for('posts.nueva_publicacion') }}"class="btn btn-primary">¡Publica algo ya!</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -29,7 +29,7 @@
                 <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
                     <h5 style="color: rgb(145, 251, 59);">APRENDE DELICIOSAMENTE</h5>
                     <p>Consulta y aprende sobre la diferente información nutrimental que contienen diversos alimentos en la Nutripedia.</p>
-                    <a href="#" class="btn btn-primary">¡Aprende ya!</a>
+                    <a href="{{ url_for('main.nutripedia') }}" class="btn btn-primary">¡Aprende ya!</a>
                 </div>
             </div>
         </div>
