@@ -1,4 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Página de Nutripedia</h1>
+    <div class="nutripedia-container">
+        <!-- Barra de navegación -->
+        <nav class="navbar bg-steel">
+            <div class="container">
+                <span class="navbar-brand text-white">Nutripedia</span>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar en la enciclopedia..." aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Barra de letras A-Z -->
+        <div class="alphabet-bar">
+            <ul class="alphabet-list">
+                {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
+                <li class="alphabet-item"><a href="#">{{ letter }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Imagen e botón -->
+        <div class="random-enciclopedia-section">
+            <img src="useful_images/nutrideli_image_placeholder.png" alt="Imagen enciclopedia" class="enciclopedia-img">
+            <button class="btn btn-info mt-3">Elemento aleatorio de la enciclopedia</button>
+        </div>
+    </div>
 {% endblock content %}
+

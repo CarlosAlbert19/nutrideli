@@ -134,3 +134,48 @@ body {
       width: 100%;
       object-fit: fill; /* Ajusta la imagen para cubrir el contenedor */
   }
+
+
+
+
+
+/* Nuevas clases para Nutripedia */
+.alphabet-bar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.alphabet-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alphabet-item {
+  display: inline;
+  margin: 0 10px;
+}
+
+.alphabet-item a {
+  color: #4CAF50;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.alphabet-item a:hover {
+  color: #2a5e2c;
+  text-decoration: underline;
+}
+
+.random-enciclopedia-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.enciclopedia-img {
+  width: 300px;
+  height: auto;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+}
+
+

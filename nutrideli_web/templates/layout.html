@@ -25,6 +25,7 @@
               <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link {% if request.endpoint == 'main.inicio' %}active{% endif %}" href="{{ url_for('main.inicio') }}">Inicio</a>
                 <a class="nav-item nav-link {% if request.endpoint == 'main.blog_publicaciones' %}active{% endif %}" href="{{ url_for('main.blog_publicaciones') }}">Publicaciones</a>
+                <a class="nav-item nav-link {% if request.endpoint == 'main.crear_dieta' %}active{% endif %}" href="{{ url_for('main.crear_dieta') }}">Dieta</a>
                 <a class="nav-item nav-link {% if request.endpoint == 'main.nutripedia' %}active{% endif %}" href="{{ url_for('main.nutripedia') }}">Nutripedia</a>
                 <a class="nav-item nav-link {% if request.endpoint == 'main.acerca_de' %}active{% endif %}" href="{{ url_for('main.acerca_de') }}">Acerca de</a>
               </div>

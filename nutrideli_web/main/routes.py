@@ -22,3 +22,7 @@ def nutripedia():
 @main.route("/acerca_de")
 def acerca_de():
     return render_template ('acerca_de.html', titulo_pagina='Acerca de', es_inicio=False)
+
+@main.route("/crear_dieta")
+def crear_dieta():
+    return render_template ('crear_dieta.html', titulo_pagina='Crear dieta', es_inicio=False)
