@@ -178,4 +178,21 @@ body {
   border-radius: 5px;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #b9b9b9;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
 

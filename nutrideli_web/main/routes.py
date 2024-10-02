@@ -1,7 +1,11 @@
-from flask import render_template, request, Blueprint, flash, redirect, url_for
+from flask import render_template, request, Blueprint, flash, redirect, url_for, session
 from nutrideli_web.models import Post
 from flask_login import login_required, current_user
 from nutrideli_web.main.forms import CrearDietaForm
+from nutrideli_web import db
+from nutrideli_web.ai_model.dieta_modelo import calculate_calories_basic, better_model
+from datetime import datetime
+import json
 
 main = Blueprint('main', __name__)
 
@@ -10,6 +14,15 @@ main = Blueprint('main', __name__)
 @main.route("/inicio")
 def inicio():
     return render_template ('inicio.html', titulo_pagina='Inicio', es_inicio=True)
+
+@main.context_processor
+def inject_consejo_del_dia():
+    dia_actual = datetime.now().day
+    with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\consejos.json', 'r', encoding='utf-8') as f:
+        consejos = json.load(f)
+    consejo_del_dia = consejos.get(str(dia_actual))
+
+    return dict(consejo_del_dia=consejo_del_dia)
 
 @main.route("/publicaciones")
 def blog_publicaciones():
@@ -34,6 +47,12 @@ def crear_dieta():
         peso = form.peso.data
         sexo = form.sexo.data
         objetivo = form.objetivo.data
+
+        calorias = calculate_calories_basic(peso, altura, sexo)
+        dieta = better_model(peso, calorias)
+
+        # print(dieta)
+        # print(calorias)
         
         # Aquí es donde procesarías los datos, por ejemplo:
         # dieta = Dieta(altura=altura, peso=peso, sexo=sexo, objetivo=objetivo, author=current_user)
@@ -41,6 +60,17 @@ def crear_dieta():
         # db.session.commit()
         
         # Por ahora, simplemente mostraremos un mensaje de éxito
+
         flash('¡Tu dieta ha sido creada exitosamente!', 'success')
-        return redirect(url_for('main.inicio'))
+        #return redirect(url_for('main.dieta_creada'))
+        return render_template('dieta_creada.html', titulo_pagina='Dieta creada', dieta=dieta, es_inicio=False)
     return render_template('crear_dieta.html', titulo_pagina='Crear Dieta', form=form, es_inicio=False)
+
+
+@main.route("/dieta_creada")
+def dieta_creada():
+    dieta = session.get('dieta', None)
+    if not dieta:
+        flash('Por favor, crea una dieta primero.', 'warning')
+        return redirect(url_for('main.crear_dieta'))
+    return render_template ('dieta_creada.html', titulo_pagina='Dieta creada', dieta=dieta, es_inicio=False)

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="mb-4">Dieta Generada</h1>
+
+    <div class="diet-table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Comida</th>
+                    <th>Alimentos</th>
+                    <th>Cantidad (g)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- {% for dia, comidas in dieta.items() %}
+                    {% for comida, alimentos in comidas.items() %}
+                        {% for item in alimentos.itertuples() %}
+                        <tr>
+                            {% if loop.first %}
+                                <td rowspan="{{ alimentos.shape[0] * 3 }}">{{ dia }}</td>
+                            {% endif %}
+                            <td>{{ comida }}</td>
+                            <td>{{ item.Food }}</td>
+                            <td>{{ item._2 }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %} -->
+                <!-- {% for dia, comidas in dieta.items() %}
+                    {% for comida, detalles in comidas.items() %}
+                        {% for index, fila in detalles.iterrows() %}
+                            <tr>
+                                <td>{{ dia }}</td>
+                                <td>{{ comida }}</td>
+                                <td>{{ fila['Food'] }}</td>
+                                <td>{{ fila['Quantity (g)'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %} -->
+                {% for dia, comidas in dieta.items() %}
+                    {% for comida, detalles in comidas.items() %}
+                        {% set contador = 0 %}
+                        {% for index, fila in detalles.iterrows() %}
+                            {% if contador < 5 %}
+                                <tr>
+                                    <td>{{ dia }}</td>
+                                    <td>{{ comida }}</td>
+                                    <td>{{ fila['Food'] }}</td>
+                                    <td>{{ fila['Quantity (g)'] }}</td>
+                                </tr>
+                                {% set contador = contador + 1 %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
