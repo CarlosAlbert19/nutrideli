@@ -14,6 +14,10 @@ body {
   .bg-steel {
     background-color: #4CAF50;
   }
+
+  .bg-steel-nutri {
+    background-color: #5acf5d;
+  }
   
   .site-header .navbar-nav .nav-link {
     color: #ffffff;
@@ -135,14 +139,10 @@ body {
       object-fit: fill; /* Ajusta la imagen para cubrir el contenedor */
   }
 
-
-
-
-
 /* Nuevas clases para Nutripedia */
 .alphabet-bar {
   text-align: center;
-  margin-top: 20px;
+  background-color: #97ff9b;
 }
 
 .alphabet-list {
@@ -153,6 +153,11 @@ body {
 .alphabet-item {
   display: inline;
   margin: 0 10px;
+  text-shadow: 
+  -0.5px -0.5px 0 #00730f,  
+  0.5px -0.5px 0 #00730f,
+  -0.5px  0.5px 0 #00730f,
+  0.5px  0.5px 0 #00730f;
 }
 
 .alphabet-item a {
@@ -193,6 +198,22 @@ th {
 
 td {
   background-color: #f2f2f2;
+}
+
+.text-nutri {
+  color: #00730f;
+  font-weight: 500;
+  font-size: 2.0rem;
+  letter-spacing: 0.10rem;
+  text-shadow: 
+  -0.5px -0.5px 0 #00730f,  
+  0.5px -0.5px 0 #00730f,
+  -0.5px  0.5px 0 #00730f,
+  0.5px  0.5px 0 #00730f;
+}
+
+.navbar-brand {
+  margin: 0 auto; /* Centrar horizontalmente */
 }
 
 

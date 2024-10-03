@@ -126,9 +126,6 @@ def calculate_calories_basic(weight, height, sex):
     
     return calories
 
-
-
-
 weight = 80  # en kg
 height = 180  # en cm
 sex = 'male'  # 'male' o 'female'

@@ -2,9 +2,9 @@
 {% block content %}
     <div class="nutripedia-container">
         <!-- Barra de navegación -->
-        <nav class="navbar bg-steel">
-            <div class="container">
-                <span class="navbar-brand text-white">Nutripedia</span>
+        <nav class="navbar bg-steel-nutri">
+            <div class="container d-flex justify-content-between align-items-center">
+                <span class="navbar-brand text-nutri">NUTRIPEDIA</span>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar en la enciclopedia..." aria-label="Search">
                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
@@ -22,9 +22,11 @@
         </div>
 
         <!-- Imagen e botón -->
-        <div class="random-enciclopedia-section">
-            <img src="useful_images/nutrideli_image_placeholder.png" alt="Imagen enciclopedia" class="enciclopedia-img">
+        <div style="text-align: center;">
             <button class="btn btn-info mt-3">Elemento aleatorio de la enciclopedia</button>
+        </div>
+        <div class="random-enciclopedia-section">
+            <img src="{{ url_for('static', filename='useful_images/nutripedro.png') }}" alt="Imagen enciclopedia">
         </div>
     </div>
 {% endblock content %}
