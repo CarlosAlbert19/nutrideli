@@ -63,7 +63,7 @@ def crear_dieta():
 
         flash('¡Tu dieta ha sido creada exitosamente!', 'success')
         #return redirect(url_for('main.dieta_creada'))
-        return render_template('dieta_creada.html', titulo_pagina='Dieta creada', dieta=dieta, es_inicio=False)
+        return render_template('dieta_creada.html', titulo_pagina='Dieta creada', dieta=dieta, calorias=calorias, es_inicio=False)
     return render_template('crear_dieta.html', titulo_pagina='Crear Dieta', form=form, es_inicio=False)
 
 

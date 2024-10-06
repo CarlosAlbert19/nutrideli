@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from pulp import *
 
-csv_path = os.path.join(os.path.dirname(__file__), 'nutrition_ALT.csv')
+csv_path = os.path.join(os.path.dirname(__file__), 'nutrition_traducido.csv')
 data = pd.read_csv(csv_path).drop('Unnamed: 0', axis=1)
 week_days = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']
 meals = ['Desayuno', 'Comida', 'Cena']
@@ -90,7 +90,6 @@ def random_dataset_day():
     return dict(zip(week_days, day_data))
 
 def random_dataset_meal(day_data):
-    # meals = ['Desayuno', 'Comida', 'Cena']
     meal_split = np.linspace(0, len(day_data), 4).astype(int)
     return dict(zip(meals, [day_data.iloc[meal_split[i]:meal_split[i+1]] for i in range(len(meal_split)-1)]))
 
@@ -126,11 +125,9 @@ def calculate_calories_basic(weight, height, sex):
     
     return calories
 
-weight = 80  # en kg
-height = 180  # en cm
-sex = 'male'  # 'male' o 'female'
-calorias = calculate_calories_basic(weight, height, sex)
+# weight = 80  # en kg
+# height = 180  # en cm
+# sex = 'male'  # 'male' o 'female'
+# calorias = calculate_calories_basic(weight, height, sex)
 
-diet = better_model(weight, calorias)
-#print(diet)
-#print(calorias)
+# diet = better_model(weight, calorias)
