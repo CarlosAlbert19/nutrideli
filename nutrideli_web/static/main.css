@@ -117,12 +117,22 @@ body {
     border-radius: 3px;
     margin-top: 40px;
     margin-bottom: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .about-title {
     color: #008b17;
   }
   
+  .about-subtitle {
+    white-space: pre-line;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    margin-top: 40px;
+    font-weight: bold;
+    font-style: italic;
+  }
   .about-content {
     white-space: pre-line;
     font-family: 'Roboto', sans-serif;
@@ -214,6 +224,18 @@ td {
 
 .navbar-brand {
   margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.container_inicio {
+  max-width: 900px; /* Ajusta este valor según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 80px;
+  padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+  /* background-color: #f9f9f9; */
+  background-color: #EEEEEE;
+  border-radius: 10px; 
+  border: 2px solid #afafaf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
