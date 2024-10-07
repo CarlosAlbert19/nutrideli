@@ -34,6 +34,34 @@ def blog_publicaciones():
 def nutripedia():
     return render_template ('nutripedia.html', titulo_pagina='Nutripedia', es_inicio=False)
 
+
+@main.route('/buscar_alimento', methods=['POST'])
+def buscar_alimento():
+    # Obtener el nombre del alimento desde el formulario
+    alimento_buscado = request.form['alimento'].capitalize()
+
+    # Cargar el archivo JSON de alimentos
+    try:
+        with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+
+        # Buscar el alimento en el archivo JSON
+        resultado = next((item for item in data['alimentos'] if item['nombre'] == alimento_buscado), None)
+
+        if resultado:
+            # Si el alimento se encuentra, mostrar la página con los detalles
+            return render_template('nutripedia-res.html', alimento=resultado)
+        else:
+            # Si el alimento no se encuentra, mostrar un mensaje de error
+            flash("El alimento no fue encontrado en la enciclopedia.", 'warning')
+            return redirect(url_for('main.nutripedia'))
+    
+    except FileNotFoundError:
+        flash("El archivo de datos no se encuentra.", 'danger')
+        return redirect(url_for('main.nutripedia'))
+
+
+
 @main.route("/acerca_de")
 def acerca_de():
     return render_template ('acerca_de.html', titulo_pagina='Acerca de', es_inicio=False)

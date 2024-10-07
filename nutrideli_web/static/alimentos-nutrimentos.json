@@ -1,0 +1,406 @@
+{
+    "alimentos": [
+        {
+            "nombre": "Manzana",
+            "imagen": "nutripedia/Manzana.jpg",
+            "proteinas": "0.3g",
+            "carbohidratos": "14g",
+            "grasas": "0.2g",
+            "fibra": "2.4g",
+            "sodio": "1mg",
+            "descripcion": "La manzana es rica en fibra y vitamina C."
+        },
+        {
+            "nombre": "Platano",
+            "imagen": "nutripedia/Platano.jpg",
+            "proteinas": "1.3g",
+            "carbohidratos": "27g",
+            "grasas": "0.3g",
+            "fibra": "3.1g",
+            "sodio": "1mg",
+            "descripcion": "La banana es una buena fuente de potasio."
+        },
+        {
+            "nombre": "Naranja",
+            "imagen": "nutripedia/Naranja.jpg",
+            "proteinas": "1.2g",
+            "carbohidratos": "12g",
+            "grasas": "0.2g",
+            "fibra": "2.4g",
+            "sodio": "0mg",
+            "descripcion": "La naranja es rica en vitamina C."
+        },
+        {
+            "nombre": "Fresa",
+            "imagen": "nutripedia/Fresa.jpg",
+            "proteinas": "0.8g",
+            "carbohidratos": "8g",
+            "grasas": "0.3g",
+            "fibra": "2g",
+            "sodio": "1mg",
+            "descripcion": "La fresa es baja en calorías y rica en antioxidantes."
+        },
+        {
+            "nombre": "Uva",
+            "imagen": "nutripedia/Uva.jpg",
+            "proteinas": "0.6g",
+            "carbohidratos": "17g",
+            "grasas": "0.2g",
+            "fibra": "0.9g",
+            "sodio": "2mg",
+            "descripcion": "La uva es una buena fuente de vitaminas C y K."
+        },
+        {
+            "nombre": "Piña",
+            "imagen": "nutripedia/Piña.jpg",
+            "proteinas": "0.5g",
+            "carbohidratos": "13g",
+            "grasas": "0.1g",
+            "fibra": "1.4g",
+            "sodio": "1mg",
+            "descripcion": "La piña es rica en vitamina C y manganeso."
+        },
+        {
+            "nombre": "Mango",
+            "imagen": "nutripedia/Mango.jpg",
+            "proteinas": "0.8g",
+            "carbohidratos": "15g",
+            "grasas": "0.4g",
+            "fibra": "1.6g",
+            "sodio": "1mg",
+            "descripcion": "El mango es una excelente fuente de vitamina A."
+        },
+        {
+            "nombre": "Pera",
+            "imagen": "nutripedia/Pera.jpg",
+            "proteinas": "0.4g",
+            "carbohidratos": "15g",
+            "grasas": "0.1g",
+            "fibra": "3.1g",
+            "sodio": "1mg",
+            "descripcion": "La pera es rica en fibra y vitamina C."
+        },
+        {
+            "nombre": "Sandia",
+            "imagen": "nutripedia/Sandia.jpg",
+            "proteinas": "0.6g",
+            "carbohidratos": "8g",
+            "grasas": "0.2g",
+            "fibra": "0.4g",
+            "sodio": "1mg",
+            "descripcion": "La sandía es hidratante y rica en vitamina C."
+        },
+        {
+            "nombre": "Kiwi",
+            "imagen": "nutripedia/Kiwi.jpg",
+            "proteinas": "1.1g",
+            "carbohidratos": "15g",
+            "grasas": "0.5g",
+            "fibra": "3g",
+            "sodio": "3mg",
+            "descripcion": "El kiwi es una excelente fuente de vitamina C y fibra."
+        },
+        {
+            "nombre": "Zanahoria",
+            "imagen": "nutripedia/Zanahoria.jpg",
+            "proteinas": "0.9g",
+            "carbohidratos": "10g",
+            "grasas": "0.2g",
+            "fibra": "2.8g",
+            "sodio": "69mg",
+            "descripcion": "La zanahoria es excelente para la vista y rica en betacaroteno."
+        },
+        {
+            "nombre": "Brocoli",
+            "imagen": "nutripedia/Brocoli.jpg",
+            "proteinas": "2.8g",
+            "carbohidratos": "7g",
+            "grasas": "0.4g",
+            "fibra": "2.6g",
+            "sodio": "33mg",
+            "descripcion": "El brócoli es rico en vitaminas C y K."
+        },
+        {
+            "nombre": "Espinaca",
+            "imagen": "nutripedia/Espinaca.jpg",
+            "proteinas": "2.9g",
+            "carbohidratos": "3.6g",
+            "grasas": "0.4g",
+            "fibra": "2.2g",
+            "sodio": "79mg",
+            "descripcion": "La espinaca es rica en hierro y vitaminas A y C."
+        },
+        {
+            "nombre": "Tomate",
+            "imagen": "nutripedia/Tomate.jpg",
+            "proteinas": "0.9g",
+            "carbohidratos": "3.9g",
+            "grasas": "0.2g",
+            "fibra": "1.2g",
+            "sodio": "5mg",
+            "descripcion": "El tomate es una buena fuente de vitamina C y licopeno."
+        },
+        {
+            "nombre": "Pepino",
+            "imagen": "nutripedia/Pepino.jpg",
+            "proteinas": "0.7g",
+            "carbohidratos": "3.6g",
+            "grasas": "0.1g",
+            "fibra": "0.5g",
+            "sodio": "2mg",
+            "descripcion": "El pepino es hidratante y bajo en calorías."
+        },
+        {
+            "nombre": "Lechuga",
+            "imagen": "nutripedia/Lechuga.jpg",
+            "proteinas": "1.4g",
+            "carbohidratos": "2.9g",
+            "grasas": "0.2g",
+            "fibra": "1.3g",
+            "sodio": "28mg",
+            "descripcion": "La lechuga es baja en calorías y rica en agua."
+        },
+        {
+            "nombre": "Pimiento",
+            "imagen": "nutripedia/Pimiento.jpg",
+            "proteinas": "1g",
+            "carbohidratos": "6g",
+            "grasas": "0.3g",
+            "fibra": "2.1g",
+            "sodio": "2mg",
+            "descripcion": "El pimiento es rico en vitamina C y antioxidantes."
+        },
+        {
+            "nombre": "Calabacin",
+            "imagen": "nutripedia/Calabacin.jpg",
+            "proteinas": "1.2g",
+            "carbohidratos": "3.1g",
+            "grasas": "0.3g",
+            "fibra": "1g",
+            "sodio": "3mg",
+            "descripcion": "El calabacín es bajo en calorías y rico en vitamina C."
+        },
+        {
+            "nombre": "Coliflor",
+            "imagen": "nutripedia/Coliflor.jpg",
+            "proteinas": "1.9g",
+            "carbohidratos": "5g",
+            "grasas": "0.3g",
+            "fibra": "2g",
+            "sodio": "30mg",
+            "descripcion": "La coliflor es rica en vitamina C y antioxidantes."
+        },
+        {
+            "nombre": "Berenjena",
+            "imagen": "nutripedia/Berenjena.jpg",
+            "proteinas": "1g",
+            "carbohidratos": "6g",
+            "grasas": "0.2g",
+            "fibra": "3g",
+            "sodio": "2mg",
+            "descripcion": "La berenjena es rica en fibra y antioxidantes."
+        },
+        {
+            "nombre": "Pollo",
+            "imagen": "nutripedia/Pollo.jpg",
+            "proteinas": "27g",
+            "carbohidratos": "0g",
+            "grasas": "3.6g",
+            "fibra": "0g",
+            "sodio": "82mg",
+            "descripcion": "El pollo es una excelente fuente de proteínas magras."
+        },
+        {
+            "nombre": "Filete de res",
+            "imagen": "nutripedia/Filete_de_res.jpg",
+            "proteinas": "26g",
+            "carbohidratos": "0g",
+            "grasas": "15g",
+            "fibra": "0g",
+            "sodio": "72mg",
+            "descripcion": "La carne de res es rica en hierro y vitamina B12."
+        },
+        {
+            "nombre": "Salmon",
+            "imagen": "nutripedia/Salmon.jpgg",
+            "proteinas": "20g",
+            "carbohidratos": "0g",
+            "grasas": "13g",
+            "fibra": "0g",
+            "sodio": "59mg",
+            "descripcion": "El salmón es una excelente fuente de ácidos grasos omega-3."
+        },
+        {
+            "nombre": "Huevo",
+            "imagen": "nutripedia/Huevo.jpg",
+            "proteinas": "13g",
+            "carbohidratos": "1.1g",
+            "grasas": "11g",
+            "fibra": "0g",
+            "sodio": "124mg",
+            "descripcion": "Los huevos son una fuente completa de proteínas y contienen vitaminas B2 y B12."
+        },
+        {
+            "nombre": "Leche",
+            "imagen": "nutripedia/Leche.jpg",
+            "proteinas": "3.4g",
+            "carbohidratos": "5g",
+            "grasas": "1g",
+            "fibra": "0g",
+            "sodio": "44mg",
+            "descripcion": "La leche es rica en calcio y vitamina D."
+        },
+        {
+            "nombre": "Queso",
+            "imagen": "nutripedia/Queso.jpg",
+            "proteinas": "25g",
+            "carbohidratos": "1.3g",
+            "grasas": "33g",
+            "fibra": "0g",
+            "sodio": "621mg",
+            "descripcion": "El queso cheddar es una buena fuente de calcio y proteínas."
+        },
+        {
+            "nombre": "Yogurt",
+            "imagen": "nutripedia/Yogurt.jpg",
+            "proteinas": "10g",
+            "carbohidratos": "4g",
+            "grasas": "3.5g",
+            "fibra": "0g",
+            "sodio": "70mg",
+            "descripcion": "El yogur es beneficioso para la salud digestiva y es rico en probióticos."
+        },
+        {
+            "nombre": "Jamon",
+            "imagen": "nutripedia/Jamon.jpg",
+            "proteinas": "18g",
+            "carbohidratos": "1.5g",
+            "grasas": "5g",
+            "fibra": "0g",
+            "sodio": "1200mg",
+            "descripcion": "El jamón es una fuente de proteínas y contiene vitaminas del grupo B."
+        },
+        {
+            "nombre": "Mantequilla",
+            "imagen": "nutripedia/Mantequilla.jpg",
+            "proteinas": "0.9g",
+            "carbohidratos": "0.1g",
+            "grasas": "81g",
+            "fibra": "0g",
+            "sodio": "11mg",
+            "descripcion": "La mantequilla es rica en grasas saturadas y vitaminas A y D."
+        },
+        {
+            "nombre": "Arroz",
+            "imagen": "nutripedia/Arroz.jpg",
+            "proteinas": "2.7g",
+            "carbohidratos": "28g",
+            "grasas": "0.3g",
+            "fibra": "0.4g",
+            "sodio": "1mg",
+            "descripcion": "El arroz es una buena fuente de energía y carbohidratos."
+        },
+        {
+            "nombre": "Frijoles",
+            "imagen": "nutripedia/Frijol.jpg",
+            "proteinas": "8.9g",
+            "carbohidratos": "27g",
+            "grasas": "0.5g",
+            "fibra": "7.4g",
+            "sodio": "1mg",
+            "descripcion": "Los frijoles son ricos en proteínas y fibra."
+        },
+        {
+            "nombre": "Lentejas",
+            "imagen": "nutripedia/Lenteja.jpg",
+            "proteinas": "9g",
+            "carbohidratos": "20g",
+            "grasas": "0.4g",
+            "fibra": "8g",
+            "sodio": "6mg",
+            "descripcion": "Las lentejas son una excelente fuente de proteínas y hierro."
+        },
+        {
+            "nombre": "Garbanzos",
+            "imagen": "nutripedia/Garbanzo.jpg",
+            "proteinas": "8.9g",
+            "carbohidratos": "27g",
+            "grasas": "2.6g",
+            "fibra": "7.6g",
+            "sodio": "24mg",
+            "descripcion": "Los garbanzos son ricos en proteínas y fibra."
+        },
+        {
+            "nombre": "Avena",
+            "imagen": "nutripedia/Avena.jpg",
+            "proteinas": "2.4g",
+            "carbohidratos": "12g",
+            "grasas": "1.4g",
+            "fibra": "1.7g",
+            "sodio": "2mg",
+            "descripcion": "La avena es rica en fibra y ayuda a reducir el colesterol."
+        },
+        {
+            "nombre": "Quinoa",
+            "imagen": "nutripedia/Quinoa.jpg",
+            "proteinas": "4.1g",
+            "carbohidratos": "21g",
+            "grasas": "1.9g",
+            "fibra": "2.8g",
+            "sodio": "7mg",
+            "descripcion": "La quinoa es una proteína completa y rica en fibra."
+        },
+        {
+            "nombre": "Maiz",
+            "imagen": "nutripedia/Maiz.jpg",
+            "proteinas": "3.2g",
+            "carbohidratos": "19g",
+            "grasas": "1.2g",
+            "fibra": "2.7g",
+            "sodio": "15mg",
+            "descripcion": "El maíz es una buena fuente de carbohidratos y fibra."
+        },
+        {
+            "nombre": "Trigo",
+            "imagen": "nutripedia/Trigo.jpg",
+            "proteinas": "13g",
+            "carbohidratos": "72g",
+            "grasas": "1.5g",
+            "fibra": "12g",
+            "sodio": "2mg",
+            "descripcion": "El trigo es rico en carbohidratos y fibra."
+        },
+        {
+            "nombre": "Cebada",
+            "imagen": "nutripedia/Cebada.jpg",
+            "proteinas": "2.3g",
+            "carbohidratos": "22g",
+            "grasas": "0.4g",
+            "fibra": "3.8g",
+            "sodio": "2mg",
+            "descripcion": "La cebada es rica en fibra y ayuda a la digestión."
+        },
+        {
+            "nombre": "Centeno",
+            "imagen": "nutripedia/Centeno.jpg",
+            "proteinas": "2.5g",
+            "carbohidratos": "15g",
+            "grasas": "0.3g",
+            "fibra": "2.9g",
+            "sodio": "1mg",
+            "descripcion": "El centeno es una buena fuente de fibra y ayuda a la salud digestiva."
+        },
+        {
+            "nombre": "Sorgo",
+            "imagen": "nutripedia/Sorgo.jpg",
+            "proteinas": "3.4g",
+            "carbohidratos": "21g",
+            "grasas": "1.1g",
+            "fibra": "2.7g",
+            "sodio": "2mg",
+            "descripcion": "El sorgo es rico en antioxidantes y fibra."
+        }
+    ]
+}
+        
+  

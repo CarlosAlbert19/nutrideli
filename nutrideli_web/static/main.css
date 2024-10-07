@@ -212,6 +212,7 @@ td {
 
 .text-nutri {
   color: #00730f;
+  background-color: #97ff9b;
   font-weight: 500;
   font-size: 2.0rem;
   letter-spacing: 0.10rem;
@@ -238,4 +239,15 @@ td {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.dato-interesante {
+  background: #EEEEEE; 
+  padding: 10px 20px;
+  border: 2px solid #afafaf;
+  border-radius: 3px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 

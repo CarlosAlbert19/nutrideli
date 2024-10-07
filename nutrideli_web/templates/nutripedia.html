@@ -5,21 +5,22 @@
         <nav class="navbar bg-steel-nutri">
             <div class="container d-flex justify-content-between align-items-center">
                 <span class="navbar-brand text-nutri">NUTRIPEDIA</span>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar en la enciclopedia..." aria-label="Search">
+                <form class="form-inline" action="{{ url_for('main.buscar_alimento') }}" method="POST">
+                    <input class="form-control mr-sm-2" type="search" name="alimento" placeholder="Buscar en la enciclopedia..." aria-label="Search" required>
                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
+                
             </div>
         </nav>
 
         <!-- Barra de letras A-Z -->
-        <div class="alphabet-bar">
+        <!-- <div class="alphabet-bar">
             <ul class="alphabet-list">
                 {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
                 <li class="alphabet-item"><a href="#">{{ letter }}</a></li>
                 {% endfor %}
             </ul>
-        </div>
+        </div> -->
 
         <!-- Imagen e botón -->
         <div style="text-align: center;">
