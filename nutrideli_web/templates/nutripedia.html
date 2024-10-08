@@ -33,6 +33,12 @@
                 <h1 class="about-title text-center">¿Qué información nutrimental tiene tu alimento de la mesa?</h1>
                 <p class="about-content text-justify">Toma una foto de ese alimento, transfierela a tu computadora y súbela en este apartado para darte más información de ese alimento.
                 </p>
+                <form action="{{ url_for('main.procesar_imagen') }}" method="POST" enctype="multipart/form-data">
+                    <label for="file">Sube una imagen de tu alimento:</label>
+                    <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
+                    <button type="submit" class="btn btn-primary mt-2" style="background-color: #4CAF50; border-color: #4CAF50;">Subir</button>
+                </form>
+                
             </div>
         </article>
 

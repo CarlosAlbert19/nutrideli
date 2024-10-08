@@ -6,6 +6,12 @@ from nutrideli_web import db
 from nutrideli_web.ai_model.dieta_modelo import calculate_calories_basic, better_model
 from datetime import datetime
 import json
+import os
+from werkzeug.utils import secure_filename
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import load_model
+import numpy as np
 
 main = Blueprint('main', __name__)
 
@@ -60,6 +66,75 @@ def buscar_alimento():
         flash("El archivo de datos no se encuentra.", 'danger')
         return redirect(url_for('main.nutripedia'))
 
+@main.route('/procesar_imagen', methods=['POST'])
+def procesar_imagen():
+    if 'file' not in request.files:
+        flash('No se seleccionó ningún archivo', 'warning')
+        return redirect(url_for('main.nutripedia'))
+
+    file = request.files['file']
+    
+    if file.filename == '':
+        flash('No se seleccionó ningún archivo', 'warning')
+        return redirect(url_for('main.nutripedia'))
+
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        filepath = os.path.join('nutrideli_web\\main\\uploads', filename)
+        file.save(filepath)
+
+        # Procesar la imagen con el modelo de IA
+        nombre_alimento = procesar_imagen_con_ia(filepath)
+
+        # Redirigir a la barra de búsqueda con el resultado del modelo
+        return redirect(url_for('main.buscar_alimento_automatico', alimento=nombre_alimento))
+
+    flash('Formato de archivo no permitido. Solo se permiten JPG y PNG.', 'danger')
+    return redirect(url_for('main.nutripedia'))
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'jpg', 'jpeg', 'png'}
+
+def procesar_imagen_con_ia(filepath):
+    model = tf.keras.models.load_model('nutrideli_web\\main\\Image_classify.keras')
+
+    img_height, img_width = 180, 180
+    data_cat = ['ajo', 'berenjena', 'cebolla', 'coliflor', 'espinaca', 'frijoles', 'granada', 'guisantes', 'jalepeno', 'jengibre', 'kiwi', 'lechuga', 'limon', 'maiz', 'maiz dulce', 'mango', 'manzana', 'nabo', 'naranja', 'papa', 'papa culce', 'paprica', 'pepino', 'pera', 'pimiento', 'pimiento morron', 'pimiento picante', 'pina', 'platano', 'rabano', 'remolacha', 'repollo', 'sandia', 'tomate', 'uvas', 'zanahoria']
+    
+    image = tf.keras.utils.load_img(filepath, target_size=(img_height, img_width))
+    img_arr = tf.keras.utils.img_to_array(image)
+    img_bat = np.expand_dims(img_arr, 0)
+
+    predict = model.predict(img_bat)
+
+    score = tf.nn.softmax(predict)
+    
+    nombre_alimento = data_cat[np.argmax(score)]
+    
+    return nombre_alimento.capitalize()
+
+@main.route('/buscar_alimento_automatico', methods=['GET'])
+def buscar_alimento_automatico():
+    alimento_buscado = request.args.get('alimento')
+
+    # Cargar el archivo JSON de alimentos (igual que en buscar_alimento)
+    try:
+        with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+
+        # Buscar el alimento en el archivo JSON
+        resultado = next((item for item in data['alimentos'] if item['nombre'] == alimento_buscado), None)
+
+        if resultado:
+            return render_template('nutripedia-res.html', alimento=resultado)
+        else:
+            flash("El alimento no fue encontrado en la enciclopedia.", 'warning')
+            return redirect(url_for('main.nutripedia'))
+    
+    except FileNotFoundError:
+        flash("El archivo de datos no se encuentra.", 'danger')
+        return redirect(url_for('main.nutripedia'))
+
 
 
 @main.route("/acerca_de")
@@ -82,12 +157,9 @@ def crear_dieta():
         # print(dieta)
         # print(calorias)
         
-        # Aquí es donde procesarías los datos, por ejemplo:
         # dieta = Dieta(altura=altura, peso=peso, sexo=sexo, objetivo=objetivo, author=current_user)
         # db.session.add(dieta)
         # db.session.commit()
-        
-        # Por ahora, simplemente mostraremos un mensaje de éxito
 
         flash('¡Tu dieta ha sido creada exitosamente!', 'success')
         #return redirect(url_for('main.dieta_creada'))
