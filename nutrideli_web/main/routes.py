@@ -24,7 +24,7 @@ def inicio():
 @main.context_processor
 def inject_consejo_del_dia():
     dia_actual = datetime.now().day
-    with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\consejos.json', 'r', encoding='utf-8') as f:
+    with open('nutrideli_web/static/consejos.json', 'r', encoding='utf-8') as f:
         consejos = json.load(f)
     consejo_del_dia = consejos.get(str(dia_actual))
 
@@ -48,7 +48,7 @@ def buscar_alimento():
 
     # Cargar el archivo JSON de alimentos
     try:
-        with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
+        with open('nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         # Buscar el alimento en el archivo JSON
@@ -119,7 +119,7 @@ def buscar_alimento_automatico():
 
     # Cargar el archivo JSON de alimentos (igual que en buscar_alimento)
     try:
-        with open('C:\\Users\\carlo\\Documents\\nutrideli\\nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
+        with open('nutrideli_web\\static\\alimentos-nutrimentos.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         # Buscar el alimento en el archivo JSON
