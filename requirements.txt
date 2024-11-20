@@ -74,6 +74,7 @@ pandas==2.2.3
 pillow==10.4.0
 pkginfo==1.10.0
 protobuf==4.25.5
+psycopg2==2.9.10
 PuLP==2.9.0
 pyarrow==17.0.0
 pydeck==0.9.1
@@ -103,6 +104,7 @@ tenacity==9.0.0
 tensorboard==2.17.1
 tensorboard-data-server==0.7.2
 tensorflow==2.17.0
+tensorflow-intel==2.17.0
 termcolor==2.5.0
 toml==0.10.2
 tornado==6.4.1
