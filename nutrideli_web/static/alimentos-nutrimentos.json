@@ -799,6 +799,16 @@
             "fibra": "1.7g",
             "sodio": "2mg",
             "descripcion": "El chayote es bajo en calorías y rico en agua y fibra, ideal para la hidratación."
+        },
+        { 
+            "nombre": "Papicra", 
+            "imagen": "nutripedia/Papicra.jpg", 
+            "proteinas": "1.5g", 
+            "carbohidratos": "15g", 
+            "grasas": "0.2g", 
+            "fibra": "1.8g", 
+            "sodio": "5mg", 
+            "descripcion": "La papicra es una variedad de papa rica en antioxidantes y vitamina A."
         }
     ]
 }
