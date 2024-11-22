@@ -399,6 +399,416 @@
             "fibra": "2.7g",
             "sodio": "2mg",
             "descripcion": "El sorgo es rico en antioxidantes y fibra."
+        },
+        {
+            "nombre": "Ajo",
+            "imagen": "nutripedia/Ajo.jpg",
+            "proteinas": "6.4g",
+            "carbohidratos": "33g",
+            "grasas": "0.5g",
+            "fibra": "2.1g",
+            "sodio": "17mg",
+            "descripcion": "El ajo es conocido por sus propiedades antioxidantes y beneficios para la salud cardiovascular."
+        },
+        {
+            "nombre": "Almendras",
+            "imagen": "nutripedia/Almendras.jpg",
+            "proteinas": "21g",
+            "carbohidratos": "22g",
+            "grasas": "49g",
+            "fibra": "12g",
+            "sodio": "1mg",
+            "descripcion": "Las almendras son ricas en grasas saludables, vitamina E y magnesio."
+        },
+        {
+            "nombre": "Arandano",
+            "imagen": "nutripedia/Arandano.jpg",
+            "proteinas": "0.7g",
+            "carbohidratos": "14g",
+            "grasas": "0.3g",
+            "fibra": "2.4g",
+            "sodio": "1mg",
+            "descripcion": "El arandano es una excelente fuente de antioxidantes y vitamina C."
+        },
+        {
+            "nombre": "Cebolla",
+            "imagen": "nutripedia/Cebolla.jpg",
+            "proteinas": "1.1g",
+            "carbohidratos": "10g",
+            "grasas": "0.1g",
+            "fibra": "1.7g",
+            "sodio": "4mg",
+            "descripcion": "La cebolla es baja en calorías y contiene compuestos que favorecen el sistema inmune."
+        },
+        {
+            "nombre": "Granada",
+            "imagen": "nutripedia/Granada.jpg",
+            "proteinas": "1.7g",
+            "carbohidratos": "19g",
+            "grasas": "1.2g",
+            "fibra": "4g",
+            "sodio": "3mg",
+            "descripcion": "La granada es rica en antioxidantes y puede ayudar a reducir la inflamación."
+        },
+        {
+            "nombre": "Guisantes",
+            "imagen": "nutripedia/Guisantes.jpg",
+            "proteinas": "5.4g",
+            "carbohidratos": "14g",
+            "grasas": "0.4g",
+            "fibra": "5g",
+            "sodio": "5mg",
+            "descripcion": "Los guisantes son una buena fuente de proteína vegetal, fibra y vitaminas."
+        },
+        {
+            "nombre": "Jalapeno",
+            "imagen": "nutripedia/Jalapeno.jpg",
+            "proteinas": "0.9g",
+            "carbohidratos": "6g",
+            "grasas": "0.2g",
+            "fibra": "2.8g",
+            "sodio": "1mg",
+            "descripcion": "El jalapeño contiene capsaicina, un compuesto que puede ayudar al metabolismo."
+        },
+        {
+            "nombre": "Jengibre",
+            "imagen": "nutripedia/Jengibre.jpg",
+            "proteinas": "1.8g",
+            "carbohidratos": "18g",
+            "grasas": "0.8g",
+            "fibra": "2g",
+            "sodio": "13mg",
+            "descripcion": "El jengibre es conocido por sus propiedades antiinflamatorias y digestivas."
+        },
+        {
+            "nombre": "Limon",
+            "imagen": "nutripedia/Limon.jpg",
+            "proteinas": "1.1g",
+            "carbohidratos": "9g",
+            "grasas": "0.3g",
+            "fibra": "2.8g",
+            "sodio": "2mg",
+            "descripcion": "El limón es rico en vitamina C y tiene propiedades desintoxicantes."
+        },
+        {
+            "nombre": "Nabo",
+            "imagen": "nutripedia/Nabo.jpg",
+            "proteinas": "0.9g",
+            "carbohidratos": "6g",
+            "grasas": "0.1g",
+            "fibra": "1.8g",
+            "sodio": "39mg",
+            "descripcion": "El nabo es bajo en calorías y una buena fuente de vitamina C."
+        },
+        {
+            "nombre": "Papa",
+            "imagen": "nutripedia/Papa.jpg",
+            "proteinas": "2g",
+            "carbohidratos": "17g",
+            "grasas": "0.1g",
+            "fibra": "2.2g",
+            "sodio": "6mg",
+            "descripcion": "La papa es una buena fuente de carbohidratos complejos y vitamina C."
+        },
+        {
+            "nombre": "Rabano",
+            "imagen": "nutripedia/Rabano.jpg",
+            "proteinas": "0.7g",
+            "carbohidratos": "3g",
+            "grasas": "0.1g",
+            "fibra": "1.6g",
+            "sodio": "39mg",
+            "descripcion": "El rábano es crujiente y bajo en calorías, ideal para ensaladas."
+        },
+        {
+            "nombre": "Remolacha",
+            "imagen": "nutripedia/Remolacha.jpg",
+            "proteinas": "1.6g",
+            "carbohidratos": "10g",
+            "grasas": "0.2g",
+            "fibra": "2.8g",
+            "sodio": "78mg",
+            "descripcion": "La remolacha es rica en antioxidantes y nitratos, beneficiosos para la salud cardiovascular."
+        },
+        {
+            "nombre": "Repollo",
+            "imagen": "nutripedia/Repollo.jpg",
+            "proteinas": "1.3g",
+            "carbohidratos": "6g",
+            "grasas": "0.1g",
+            "fibra": "2.5g",
+            "sodio": "18mg",
+            "descripcion": "El repollo es bajo en calorías y rico en vitamina K y C."
+        },
+        {
+            "nombre": "Bacalao",
+            "imagen": "nutripedia/Bacalao.jpg",
+            "proteinas": "20g",
+            "carbohidratos": "0g",
+            "grasas": "0.5g",
+            "fibra": "0g",
+            "sodio": "54mg",
+            "descripcion": "El bacalao es una excelente fuente de proteínas magras y ácidos grasos omega-3."
+        },
+        {
+            "nombre": "Cacahuates",
+            "imagen": "nutripedia/Cacahuates.jpg",
+            "proteinas": "25g",
+            "carbohidratos": "16g",
+            "grasas": "49g",
+            "fibra": "8g",
+            "sodio": "6mg",
+            "descripcion": "Los cacahuates son ricos en grasas saludables, proteínas y vitamina E."
+        },
+        {
+            "nombre": "Coco",
+            "imagen": "nutripedia/Coco.jpg",
+            "proteinas": "3.3g",
+            "carbohidratos": "15g",
+            "grasas": "33g",
+            "fibra": "9g",
+            "sodio": "20mg",
+            "descripcion": "El coco es una fuente de grasas saludables y fibra dietética."
+        },
+        {
+            "nombre": "Nueces",
+            "imagen": "nutripedia/Nueces.jpg",
+            "proteinas": "15g",
+            "carbohidratos": "14g",
+            "grasas": "65g",
+            "fibra": "6.7g",
+            "sodio": "2mg",
+            "descripcion": "Las nueces son ricas en ácidos grasos omega-3, antioxidantes y vitaminas del complejo B."
+        },
+        {
+            "nombre": "Albahaca",
+            "imagen": "nutripedia/Albahaca.jpg",
+            "proteinas": "3.2g",
+            "carbohidratos": "2.7g",
+            "grasas": "0.6g",
+            "fibra": "1.6g",
+            "sodio": "4mg",
+            "descripcion": "La albahaca es una hierba aromática rica en antioxidantes y aceites esenciales."
+        },
+        {
+            "nombre": "Castana",
+            "imagen": "nutripedia/Castana.jpg",
+            "proteinas": "3.4g",
+            "carbohidratos": "45g",
+            "grasas": "2.2g",
+            "fibra": "5.1g",
+            "sodio": "2mg",
+            "descripcion": "La castaña es una buena fuente de carbohidratos complejos y vitamina C."
+        },
+        {
+            "nombre": "Datiles",
+            "imagen": "nutripedia/Datiles.jpg",
+            "proteinas": "1.8g",
+            "carbohidratos": "75g",
+            "grasas": "0.2g",
+            "fibra": "7g",
+            "sodio": "1mg",
+            "descripcion": "Los dátiles son una fuente de energía rápida y contienen minerales como el potasio."
+        },
+        {
+            "nombre": "Habas",
+            "imagen": "nutripedia/Habas.jpg",
+            "proteinas": "7.6g",
+            "carbohidratos": "19g",
+            "grasas": "0.5g",
+            "fibra": "8.3g",
+            "sodio": "25mg",
+            "descripcion": "Las habas son una legumbre rica en proteínas, fibra y minerales como el hierro."
+        },
+        {
+            "nombre": "Nopales",
+            "imagen": "nutripedia/Nopales.jpg",
+            "proteinas": "1.3g",
+            "carbohidratos": "4g",
+            "grasas": "0.2g",
+            "fibra": "2.2g",
+            "sodio": "13mg",
+            "descripcion": "Los nopales son bajos en calorías y ricos en fibra, ayudando a regular el colesterol."
+        },
+        {
+            "nombre": "Frambuesa",
+            "imagen": "nutripedia/Frambuesa.jpg",
+            "proteinas": "1.2g",
+            "carbohidratos": "12g",
+            "grasas": "0.7g",
+            "fibra": "6.5g",
+            "sodio": "1mg",
+            "descripcion": "Las frambuesas son ricas en antioxidantes y fibra dietética."
+        },
+        {
+            "nombre": "Grosella",
+            "imagen": "nutripedia/Grosella.jpg",
+            "proteinas": "1.6g",
+            "carbohidratos": "14g",
+            "grasas": "0.2g",
+            "fibra": "4.3g",
+            "sodio": "1mg",
+            "descripcion": "Las grosellas contienen vitamina C y tienen propiedades antioxidantes."
+        },
+        {
+            "nombre": "Mamey",
+            "imagen": "nutripedia/Mamey.jpg",
+            "proteinas": "1.5g",
+            "carbohidratos": "25g",
+            "grasas": "0.4g",
+            "fibra": "5.4g",
+            "sodio": "5mg",
+            "descripcion": "El mamey es una fruta tropical rica en fibra y vitamina A."
+        },
+        {
+            "nombre": "Salmon",
+            "imagen": "nutripedia/Salmon.jpg",
+            "proteinas": "20g",
+            "carbohidratos": "0g",
+            "grasas": "13g",
+            "fibra": "0g",
+            "sodio": "59mg",
+            "descripcion": "El salmón es una fuente de proteínas y ácidos grasos omega-3, esenciales para el corazón."
+        },
+        {
+            "nombre": "Camarones",
+            "imagen": "nutripedia/Camarones.jpg",
+            "proteinas": "24g",
+            "carbohidratos": "0g",
+            "grasas": "0.3g",
+            "fibra": "0g",
+            "sodio": "148mg",
+            "descripcion": "Los camarones son bajos en calorías y ricos en proteínas y selenio."
+        },
+        {
+            "nombre": "Guayaba",
+            "imagen": "nutripedia/Guayaba.jpg",
+            "proteinas": "2.6g",
+            "carbohidratos": "14g",
+            "grasas": "0.9g",
+            "fibra": "5.4g",
+            "sodio": "2mg",
+            "descripcion": "La guayaba es rica en vitamina C y fibra, ideal para el sistema digestivo."
+        },
+        {
+            "nombre": "Melon",
+            "imagen": "nutripedia/Melon.jpg",
+            "proteinas": "0.8g",
+            "carbohidratos": "8g",
+            "grasas": "0.2g",
+            "fibra": "0.9g",
+            "sodio": "16mg",
+            "descripcion": "El melón es hidratante y contiene vitamina C y antioxidantes."
+        },
+        {
+            "nombre": "Jicama",
+            "imagen": "nutripedia/Jicama.jpg",
+            "proteinas": "1g",
+            "carbohidratos": "9g",
+            "grasas": "0.1g",
+            "fibra": "4.9g",
+            "sodio": "4mg",
+            "descripcion": "La jícama es baja en calorías y rica en fibra y agua."
+        },
+        {
+            "nombre": "Apio",
+            "imagen": "nutripedia/Apio.jpg",
+            "proteinas": "0.7g",
+            "carbohidratos": "3g",
+            "grasas": "0.2g",
+            "fibra": "1.6g",
+            "sodio": "80mg",
+            "descripcion": "El apio es muy bajo en calorías y rico en antioxidantes y fibra."
+        },
+        {
+            "nombre": "Yaca",
+            "imagen": "nutripedia/Yaca.jpg",
+            "proteinas": "1.7g",
+            "carbohidratos": "23g",
+            "grasas": "0.6g",
+            "fibra": "1.5g",
+            "sodio": "3mg",
+            "descripcion": "La yaca es una fruta exótica rica en carbohidratos y vitamina C."
+        },
+        {
+            "nombre": "Zarzamora",
+            "imagen": "nutripedia/Zarzamora.jpg",
+            "proteinas": "1.4g",
+            "carbohidratos": "10g",
+            "grasas": "0.5g",
+            "fibra": "5.3g",
+            "sodio": "1mg",
+            "descripcion": "La zarzamora es una buena fuente de antioxidantes, fibra y vitamina C."
+        },
+        {
+            "nombre": "Papaya",
+            "imagen": "nutripedia/Papaya.jpg",
+            "proteinas": "0.5g",
+            "carbohidratos": "11g",
+            "grasas": "0.1g",
+            "fibra": "1.7g",
+            "sodio": "8mg",
+            "descripcion": "La papaya contiene enzimas digestivas y es rica en vitamina C."
+        },
+        {
+            "nombre": "Ciruela",
+            "imagen": "nutripedia/Ciruela.jpg",
+            "proteinas": "0.7g",
+            "carbohidratos": "11g",
+            "grasas": "0.2g",
+            "fibra": "1.4g",
+            "sodio": "0mg",
+            "descripcion": "La ciruela es rica en antioxidantes y conocida por mejorar la digestión."
+        },
+        {
+            "nombre": "Cereza",
+            "imagen": "nutripedia/Cereza.jpg",
+            "proteinas": "1.1g",
+            "carbohidratos": "12g",
+            "grasas": "0.2g",
+            "fibra": "1.6g",
+            "sodio": "3mg",
+            "descripcion": "Las cerezas son una buena fuente de antioxidantes y vitamina C."
+        },
+        {
+            "nombre": "Pitaya",
+            "imagen": "nutripedia/Pitaya.jpg",
+            "proteinas": "1.2g",
+            "carbohidratos": "11g",
+            "grasas": "0.4g",
+            "fibra": "3g",
+            "sodio": "10mg",
+            "descripcion": "La pitaya, o fruta del dragón, es rica en antioxidantes y vitamina C."
+        },
+        {
+            "nombre": "Higo",
+            "imagen": "nutripedia/Higo.jpg",
+            "proteinas": "0.8g",
+            "carbohidratos": "19g",
+            "grasas": "0.3g",
+            "fibra": "2.9g",
+            "sodio": "1mg",
+            "descripcion": "El higo es dulce, rico en fibra y una buena fuente de antioxidantes."
+        },
+        {
+            "nombre": "Maracuya",
+            "imagen": "nutripedia/Maracuya.jpg",
+            "proteinas": "2.2g",
+            "carbohidratos": "23g",
+            "grasas": "0.4g",
+            "fibra": "10g",
+            "sodio": "28mg",
+            "descripcion": "La maracuyá es rica en fibra y vitamina C, ideal para fortalecer el sistema inmune."
+        },
+        {
+            "nombre": "Chayote",
+            "imagen": "nutripedia/Chayote.jpg",
+            "proteinas": "0.8g",
+            "carbohidratos": "4.5g",
+            "grasas": "0.1g",
+            "fibra": "1.7g",
+            "sodio": "2mg",
+            "descripcion": "El chayote es bajo en calorías y rico en agua y fibra, ideal para la hidratación."
         }
     ]
 }
