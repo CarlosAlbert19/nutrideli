@@ -222,7 +222,7 @@
         },
         {
             "nombre": "Salmon",
-            "imagen": "nutripedia/Salmon.jpgg",
+            "imagen": "nutripedia/Salmon.jpg",
             "proteinas": "20g",
             "carbohidratos": "0g",
             "grasas": "13g",
@@ -659,16 +659,6 @@
             "fibra": "5.4g",
             "sodio": "5mg",
             "descripcion": "El mamey es una fruta tropical rica en fibra y vitamina A."
-        },
-        {
-            "nombre": "Salmon",
-            "imagen": "nutripedia/Salmon.jpg",
-            "proteinas": "20g",
-            "carbohidratos": "0g",
-            "grasas": "13g",
-            "fibra": "0g",
-            "sodio": "59mg",
-            "descripcion": "El salmón es una fuente de proteínas y ácidos grasos omega-3, esenciales para el corazón."
         },
         {
             "nombre": "Camarones",
